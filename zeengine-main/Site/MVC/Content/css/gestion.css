@@ -1,0 +1,50 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0px;
+  }
+  
+  h3 span.nouveau {
+    border: 2px solid #000080;
+    background-color: #000080;
+    color: white;
+    padding: 5px;
+    text-align: left;
+    position: relative;
+    top: -5px;
+    border-radius: 5px;
+}
+
+h2, h3 {
+  margin-left: 20px;
+}
+
+.Tableau {
+    width: 98%;
+    border-collapse: collapse;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #003cff;
+  }
+
+  .Tableau tr:nth-child(n+2):hover {
+    color: white;
+    background-color: #003cff; /* Vous pouvez également changer la couleur de fond au survol si nécessaire */
+}
+
+.modifier, .supprimer, .plus {
+    width: 30px;
+    height: 30px;
+}

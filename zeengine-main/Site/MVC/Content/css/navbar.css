@@ -1,0 +1,165 @@
+.Parametre, .Gestion, .MonEspace, .BDL, .Clients, .Composantes, .Prestataires, .Interlocuteurs, .Commerciaux, .Gestionnaires {
+    display: none;
+}
+
+.Gestion, .MonEspace, .BDL, .Parametre {
+    font-size: 20px;
+    margin-right: 50px;
+    font-weight: bold;
+    margin-left: 0px;
+}
+
+.active {
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar li {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px; /* Espace entre les éléments li */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: none;
+  }
+
+  .navbar img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 3px;
+    margin-right: 15px;
+  }
+
+p#menu {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu {
+    cursor: pointer;
+  }
+
+#menuDeroulant {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positionne le menu en dessous du texte "Administrateur" */
+    left: 0;
+    right: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+#menuDeroulant li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: url('../img/background.png');
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    width: 1000px;
+}
+
+.boutonNav {
+    text-decoration: none;
+    color: black;
+    font-size: 125%;
+}
+
+a.boutonNav:hover {
+    background-color: rgba(118, 120, 122, 0.527);
+}
+
+.menu-btn {
+    position: relative;
+    display: none;
+    color: white;
+}
+
+.menu-options {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: rgba(190, 225, 254, 0.8);
+    padding: 10px;
+    margin: 0;
+    font-size: 120%;
+}
+
+.menu-options li {
+    margin-bottom: 10px;
+}
+
+.menu-options li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-btn.active + .menu-options {
+    display: block;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+/* OPTION POUR SMALL SCREEN UNIQUEMENT */
+@media (max-width: 1400px) {
+    nav {
+        display: none;
+        background: url('../img/background.png');
+    }
+
+    .menu-btn, .menu-btn.active {
+        display: inline-block;
+    }
+
+    .menu-options.active {
+        display: block;
+    }
+}

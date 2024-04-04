@@ -1,0 +1,207 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar li {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px; /* Espace entre les éléments li */
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: none;
+  }
+
+  .navbar img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 15px;
+    margin-right: 15px;
+  }
+
+p#menu {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu {
+    cursor: pointer;
+  }
+
+#menuDeroulant {
+    display: none;
+    position: absolute;
+    top: 100%; /* Positionne le menu en dessous du texte "Administrateur" */
+    left: 0;
+    right: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+#menuDeroulant li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+body {
+    background: url('../img/background.png');
+    font-family: arial, sans-serif;
+}
+
+.module {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 800px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+}
+
+.module div {
+    margin: auto;
+    transition: 0.5s;
+}
+
+.module div:hover {
+    transform: scale(1.1);
+}
+
+.module div p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+#gestions {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #13A481 75.52%, rgba(19, 164, 129, 0.00) 100%);
+}
+
+#bdl {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #E37712 81.25%, rgba(227, 119, 18, 0.00) 100%);
+}
+
+#monEspace {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #9D457A 84.9%, rgba(157, 69, 122, 0.00) 100%);
+}
+
+#parametre {
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #C7C967 84.9%, rgba(199, 201, 103, 0.00) 100%);;
+    grid-column: span 3;
+}
+
+img {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: black;
+    font-family: arial, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.notification {
+    position: fixed;
+    margin-left: 20px;
+    background: #fff;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 3px 6px 12px rgba(0, 0, 0, .4);
+    bottom: -8rem;
+    transition: all .4s;
+}
+
+.notification p {
+    color: #ff4754;
+    font-size: 15px;
+}
+
+.notification.show {
+    bottom: 2rem;
+}
+
+@media (max-width: 1024px) {
+    .module {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .module {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .module {
+        max-width: 325px;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+    }
+
+    #gestions, #bdl, #monEspace, #parametre {
+        width: 100px;
+        height: 100px;
+    }
+
+    img {
+        width: 75%;
+        height:75%;
+    }
+
+    p {
+        font-size: 12px;
+        font-weight: bold;
+    }
+}

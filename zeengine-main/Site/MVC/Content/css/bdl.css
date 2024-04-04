@@ -1,0 +1,40 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0px;
+  }
+
+  h2 {
+    margin-left: 20px;
+  }
+
+  table {
+    width: 98%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tr:hover {
+    background-color: #003cff;
+  }
+
+  .Tableau tr:nth-child(n+2):hover {
+    color: white;
+    background-color: #003cff; /* Vous pouvez également changer la couleur de fond au survol si nécessaire */
+}
+
+.bdl, .absence, .plus {
+    width: 30px;
+    height: 30px;
+}

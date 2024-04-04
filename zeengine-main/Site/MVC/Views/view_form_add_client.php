@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Content/css/form_add.css">
+    <title>Add</title>
+</head>
+<body>
+    <a class="logo-container" href="?controller=home&action=accueil"><img class='logo' src="Content/img/rubik.png" alt="Logo" onmouseover='changeImage()' onmouseout="restoreImage()"></a>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <img src="Content/img/profile.png" alt="cercle">
+                <p id="menu"><?= $prenom." ".$nom ?></p>   
+                <ul id="menuDeroulant">
+                    <li><a href="">Assistance</a></li>
+                    <li><a href="?controller=home&action=profil">Mon profil</a></li>
+                    <li><a href="?controller=home&action=se_deconnecter">Se déconnecter</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="form-container">
+        
+        <form action="?controller=set&action=ajouter_client&nom<?php if(isset($_POST['nom'])) { echo $_POST['nom'];} ?>&tel<?php if(isset($_POST['tel'])) { echo $_POST['tel'];} ?>&composante=<?php if(isset($_POST['composante'])) { echo $_POST['composante'];} ?>" method='post' class="profile-form">
+            <div class="input-group">
+            <h1>Ajouter <?=$titre ?></h1> 
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" class="input-field">
+            </div>
+            <div class="input-group">
+                <label for="prenom">Téléphone :</label>
+                <input type="text" id="Tel" name="tel" class="input-field">
+            </div>
+            <div class="input-group">
+                <label for="prenom">Composante :</label>
+                <select id="Composante" name="nomcomposante" class="input-field">
+                    <?php
+                    $composante = "";
+                    for($i=0;$i<count($composantes);$i++) {
+                        $composante .= "<option name='nomcomposante' value='".$composantes[$i]['nomcomposante']."'>".$composantes[$i]['nomcomposante']."</option>";
+                    }
+                    echo $composante;
+                    ?>
+                </select>
+            </div>
+            <button class='input-group' type="submit" class="submit-btn">Soumettre</button>
+        </form>
+    </div>
+</body>
+<script>
+    const boutonMenu = document.getElementById('menu');
+    const menuDeroulant = document.getElementById('menuDeroulant');
+    const li = document.querySelector('li');
+    const module = document.querySelector('.module');
+
+    boutonMenu.addEventListener('click', function() {
+        if (menuDeroulant.style.display === 'none') {
+            menuDeroulant.style.display = 'block';
+            li.style.background = 'white';
+        } else {
+             menuDeroulant.style.display = 'none';
+             li.style.background = 'none';
+        }
+    });
+
+    function changeImage() {
+        document.querySelector('.logo').src = 'Content/img/return-back.png';
+    }
+
+    function restoreImage() {
+        document.querySelector('.logo').src = 'Content/img/rubik.png';
+    }
+</script>
+</html>
